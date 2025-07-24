@@ -1,0 +1,6 @@
+Symlinking /home/thurdparty/Code/SUPER/devel/lib/libmarsim_render.so
+Symlinking /home/thurdparty/Code/SUPER/devel/lib/libGLAD.so
+Symlinking /home/thurdparty/Code/SUPER/devel/lib/marsim_render/test_render
+Symlinking /home/thurdparty/Code/SUPER/devel/lib/pkgconfig/marsim_render.pc
+Symlinking /home/thurdparty/Code/SUPER/devel/share/marsim_render/cmake/marsim_renderConfig.cmake
+Symlinking /home/thurdparty/Code/SUPER/devel/share/marsim_render/cmake/marsim_renderConfig-version.cmake

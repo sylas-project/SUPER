@@ -1,0 +1,17 @@
+[31m[1mCMake Error[0m at /home/thurdparty/Code/SUPER/build/super_msgs/cmake/super_msgs-genmsg.cmake:3 (message):
+  Could not find messages which
+  '/home/thurdparty/Code/SUPER/src/super_msgs/msg/MpcPositionCommand.msg'
+  depends on.  Did you forget to specify generate_messages(DEPENDENCIES ...)?
+
+  Cannot locate message [PositionCommand]: unknown package [quadrotor_msgs]
+  on search path [{{'super_msgs':
+  ['/home/thurdparty/Code/SUPER/src/super_msgs/msg'], 'geometry_msgs':
+  ['/opt/ros/noetic/share/geometry_msgs/cmake/../msg'], 'nav_msgs':
+  ['/opt/ros/noetic/share/nav_msgs/cmake/../msg'], 'std_msgs':
+  ['/opt/ros/noetic/share/std_msgs/cmake/../msg'], 'actionlib_msgs':
+  ['/opt/ros/noetic/share/actionlib_msgs/cmake/../msg']}}]
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  CMakeLists.txt:71 (generate_messages)
+
+

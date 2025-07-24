@@ -1,9 +1,26 @@
-In file included from [01m[K/home/thurdparty/Code/SUPER/src/perfect_drone_sim/include/perfect_drone_sim/ros1_perfect_drone_model.hpp:15[m[K,
-                 from [01m[K/home/thurdparty/Code/SUPER/src/perfect_drone_sim/src/ros1_perfect_drone_node.cpp:1[m[K:
-[01m[K/home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/marsim_render.hpp:47:10:[m[K [01;31m[Kfatal error: [m[Kopencv2/opencv.hpp: No such file or directory
-   47 | #include [01;31m[K<opencv2/opencv.hpp>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/perfect_drone.dir/build.make:63: CMakeFiles/perfect_drone.dir/src/ros1_perfect_drone_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:233: CMakeFiles/perfect_drone.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2
+In file included from /home/thurdparty/Code/SUPER/src/perfect_drone_sim/src/ros1_perfect_drone_node.cpp:1:
+/home/thurdparty/Code/SUPER/src/perfect_drone_sim/include/perfect_drone_sim/ros1_perfect_drone_model.hpp:36: warning: "CONFIG_FILE_DIR" redefined
+   36 | #define CONFIG_FILE_DIR(name) (string(string(ROOT_DIR) + "config/"+name))
+      | 
+In file included from /home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/marsim_render.hpp:67,
+                 from /home/thurdparty/Code/SUPER/src/perfect_drone_sim/include/perfect_drone_sim/ros1_perfect_drone_model.hpp:15,
+                 from /home/thurdparty/Code/SUPER/src/perfect_drone_sim/src/ros1_perfect_drone_node.cpp:1:
+/home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/config.hpp:30: note: this is the location of the previous definition
+   30 | #define CONFIG_FILE_DIR(name) (std::string(std::string(ROOT_DIR) + "config/"+(name)))
+      | 
+In file included from /home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/config.hpp:27,
+                 from /home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/marsim_render.hpp:67,
+                 from /home/thurdparty/Code/SUPER/src/perfect_drone_sim/include/perfect_drone_sim/ros1_perfect_drone_model.hpp:15,
+                 from /home/thurdparty/Code/SUPER/src/perfect_drone_sim/src/ros1_perfect_drone_node.cpp:1:
+/home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/yaml_loader.hpp: In member function ‘bool yaml_loader::YamlLoader::loadParamInternal(const string&, T&, const T&, bool)’:
+/home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/yaml_loader.hpp:85:20: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’
+   85 |                 if constexpr (is_vector<T>::value) {
+      |                    ^~~~~~~~~
+In file included from /home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/config.hpp:27,
+                 from /home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/marsim_render.hpp:67,
+                 from /home/thurdparty/Code/SUPER/src/perfect_drone_sim/include/perfect_drone_sim/ros1_perfect_drone_model.hpp:15,
+                 from /home/thurdparty/Code/SUPER/src/perfect_drone_sim/src/ros1_perfect_drone_node.cpp:1:
+/home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/yaml_loader.hpp: In member function ‘void yaml_loader::YamlLoader::printValue(const T&)’:
+/home/thurdparty/Code/SUPER/src/marsim_render/include/marsim_render/yaml_loader.hpp:136:16: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’
+  136 |             if constexpr (is_vector<T>::value) {
+      |                ^~~~~~~~~

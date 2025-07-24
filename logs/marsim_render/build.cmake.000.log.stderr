@@ -15,13 +15,9 @@ CMake Warning (dev) at /usr/share/cmake-3.16/Modules/FindOpenGL.cmake:275 (messa
   OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
   compatibility with CMake 3.10 and below the legacy GL library will be used.
 [36mCall Stack (most recent call first):[0m
-  CMakeLists.txt:33 (find_package)
+  CMakeLists.txt:35 (find_package)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 ** WARNING ** io features related to pcap will be disabled
 ** WARNING ** io features related to png will be disabled
 ** WARNING ** io features related to libusb-1.0 will be disabled
-[31m[1mCMake Error[0m at /home/thurdparty/Code/SUPER/src/marsim_render/CMakeLists.txt:50 (catkin_package):
-  Unknown CMake command "catkin_package".
-
-

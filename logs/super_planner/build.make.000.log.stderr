@@ -35,6 +35,21 @@
 /home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:1029:28: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
  1029 |         for (long i = 0; i < sfcs.size(); i++) {
       |                          ~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::getEnergyPartialGradByTimes(Eigen::VectorXd&) const’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:113:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘const int’ [-Wsign-compare]
+  113 |     for (long unsigned int i = 0; i < N; i++) {
+      |                                   ~~^~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::propogateGrad(const MatrixX3d&, const VectorXd&, Eigen::Matrix3Xd&, Eigen::VectorXd&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:128:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
+  128 |     for (long unsigned int i = 0; i < N - 1; i++) {
+      |                                   ~~^~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:134:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
+  134 |     for (long unsigned int i = 0; i < N - 1; i++) {
+      |                                   ~~^~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp: In constructor ‘path_search::Astar::Astar(const string&, const Ptr&, rog_map::ROGMapROS::Ptr)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp:33:5: warning:   when initialized here [-Wreorder]
+   33 |     Astar::Astar(const std::string &cfg_path,
+      |     ^~~~~
 /home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp: In member function ‘bool super_planner::CorridorGenerator::SearchPolytopeOnPath(const vec_Vec3f&, geometry_utils::PolytopeVec&, super_utils::Vec3f&, bool)’:
 /home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:76:24: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
    76 |         while(first_id < path.size() && map_ptr_->isOccupiedInflate(path[first_id])) {
@@ -48,26 +63,19 @@
 /home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:177:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
   177 |             if (second_id == path.size() - 1) {
       |                 ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp: In constructor ‘path_search::Astar::Astar(const string&, const Ptr&, rog_map::ROGMapROS::Ptr)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp:33:5: warning:   when initialized here [-Wreorder]
-   33 |     Astar::Astar(const std::string &cfg_path,
-      |     ^~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::getEnergyPartialGradByTimes(Eigen::VectorXd&) const’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:113:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘const int’ [-Wsign-compare]
-  113 |     for (long unsigned int i = 0; i < N; i++) {
-      |                                   ~~^~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::propogateGrad(const MatrixX3d&, const VectorXd&, Eigen::Matrix3Xd&, Eigen::VectorXd&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:128:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
-  128 |     for (long unsigned int i = 0; i < N - 1; i++) {
-      |                                   ~~^~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:134:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
-  134 |     for (long unsigned int i = 0; i < N - 1; i++) {
-      |                                   ~~^~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp: In member function ‘bool geometry_utils::Trajectory::getPartialTrajectoryByID(const int&, const int&, geometry_utils::Trajectory&) const’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp:203:33: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<geometry_utils::Piece>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  203 |     if (start_id < 0 || end_id_ >= pieces.size() || start_id >= end_id_) {
-      |                         ~~~~~~~~^~~~~~~~~~~~~~~~
 /home/thurdparty/Code/SUPER/src/super_planner/src/super_core/super_planner.cpp: In constructor ‘super_planner::SuperPlanner::SuperPlanner(const string&, const Ptr&, const Ptr&)’:
 /home/thurdparty/Code/SUPER/src/super_planner/src/super_core/super_planner.cpp:32:5: warning:   when initialized here [-Wreorder]
    32 |     SuperPlanner::SuperPlanner
       |     ^~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp: In member function ‘bool geometry_utils::Trajectory::getPartialTrajectoryByID(const int&, const int&, geometry_utils::Trajectory&) const’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp:203:33: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<geometry_utils::Piece>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  203 |     if (start_id < 0 || end_id_ >= pieces.size() || start_id >= end_id_) {
+      |                         ~~~~~~~~^~~~~~~~~~~~~~~~
+In file included from [01m[K/home/thurdparty/Code/SUPER/src/super_planner/Apps/fsm_node_ros1.cpp:24[m[K:
+[01m[K/home/thurdparty/Code/SUPER/src/super_planner/include/ros_interface/ros1/fsm_ros1.hpp:36:10:[m[K [01;31m[Kfatal error: [m[Kquadrotor_msgs/PositionCommand.h: No such file or directory
+   36 | #include [01;31m[K"quadrotor_msgs/PositionCommand.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/fsm_node.dir/build.make:63: CMakeFiles/fsm_node.dir/Apps/fsm_node_ros1.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:235: CMakeFiles/fsm_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

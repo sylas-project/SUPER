@@ -1,2 +1,5 @@
 [ 92%] Built target super
+[35m[1mScanning dependencies of target fsm_node[0m
+[ 96%] [32mBuilding CXX object CMakeFiles/fsm_node.dir/Apps/fsm_node_ros1.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/thurdparty/Code/SUPER/devel/.private/super_planner/lib/super_planner/fsm_node[0m
 [100%] Built target fsm_node

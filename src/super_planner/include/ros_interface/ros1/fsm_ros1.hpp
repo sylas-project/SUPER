@@ -33,8 +33,8 @@
 #include "geometry_msgs/PoseStamped.h"
 #include "nav_msgs/Path.h"
 #include "nav_msgs/Odometry.h"
-#include "quadrotor_msgs/PositionCommand.h"
-#include "quadrotor_msgs/PolynomialTrajectory.h"
+#include "super_msgs/PositionCommand.h"
+#include "super_msgs/PolynomialTrajectory.h"
 
 
 namespace fsm {
@@ -43,12 +43,12 @@ namespace fsm {
         ros::Subscriber goal_sub_;
         ros::Publisher cmd_pub, mpc_cmd_pub_, path_pub_;
         ros::Timer execution_timer_, replan_timer_, cmd_timer_;
-        quadrotor_msgs::PositionCommand pid_cmd_;
+        super_msgs::PositionCommand pid_cmd_;
         rog_map::ROGMapROS::Ptr map_ptr_;
-        quadrotor_msgs::PositionCommand latest_cmd;
+        super_msgs::PositionCommand latest_cmd;
         nav_msgs::Path path;
 
-        vector<quadrotor_msgs::PositionCommand> cmd_logs_;
+        vector<super_msgs::PositionCommand> cmd_logs_;
 
         void resetVisualizedPath() override {
             path.poses.clear();
@@ -71,13 +71,13 @@ namespace fsm {
         }
 
         void publishPolyTraj() override {
-            quadrotor_msgs::PolynomialTrajectory cmd_traj;
+            super_msgs::PolynomialTrajectory cmd_traj;
             getCommittedTrajectory(cmd_traj);
             mpc_cmd_pub_.publish(cmd_traj);
         }
 
-        void getOneHeartBeatMsg(quadrotor_msgs::PolynomialTrajectory &heartbeat, bool &traj_finish) {
-            heartbeat.type = quadrotor_msgs::PolynomialTrajectory::HEART_BEAT;
+        void getOneHeartBeatMsg(super_msgs::PolynomialTrajectory &heartbeat, bool &traj_finish) {
+            heartbeat.type = super_msgs::PolynomialTrajectory::HEART_BEAT;
             heartbeat.header.stamp = ros::Time::now();
             heartbeat.header.frame_id = "world";
             double swt;
@@ -85,11 +85,11 @@ namespace fsm {
             heartbeat.start_WT_pos = ros::Time(swt);
         }
 
-        void getCommittedTrajectory(quadrotor_msgs::PolynomialTrajectory &cmd_traj) {
+        void getCommittedTrajectory(super_msgs::PolynomialTrajectory &cmd_traj) {
             cmd_traj.header.stamp = ros::Time::now();
             cmd_traj.header.frame_id = "world";
-            cmd_traj.type = quadrotor_msgs::PolynomialTrajectory::POSITION_TRAJ |
-                            quadrotor_msgs::PolynomialTrajectory::HEART_BEAT;
+            cmd_traj.type = super_msgs::PolynomialTrajectory::POSITION_TRAJ |
+                            super_msgs::PolynomialTrajectory::HEART_BEAT;
             planner_ptr_->lockCommittedTraj();
             const Trajectory pos_traj = planner_ptr_->getCommittedPositionTrajectory();
             const Trajectory yaw_traj = planner_ptr_->getCommittedYawTrajectory();
@@ -107,7 +107,7 @@ namespace fsm {
 
             if (!yaw_traj.empty()) {
                 cmd_traj.type = cmd_traj.type |
-                                quadrotor_msgs::PolynomialTrajectory::YAW_TRAJ;
+                                super_msgs::PolynomialTrajectory::YAW_TRAJ;
                 cmd_traj.piece_num_yaw = yaw_traj.getPieceNum();
                 cmd_traj.order_yaw = 7;
                 double col_size = cmd_traj.order_yaw + 1;
@@ -130,7 +130,7 @@ namespace fsm {
             }
         }
 
-        void getOnePositionCommand(quadrotor_msgs::PositionCommand &pos_cmd, bool &traj_finish) {
+        void getOnePositionCommand(super_msgs::PositionCommand &pos_cmd, bool &traj_finish) {
             pos_cmd.trajectory_flag = 0;
             StatePVAJ pvaj;
             double yaw, yaw_dot;
@@ -278,8 +278,8 @@ namespace fsm {
             // 初始化Planner
             ros_ptr_ = std::make_shared<ros_interface::Ros1Interface>(nh_);
             planner_ptr_ = std::make_shared<SuperPlanner>(cfg_path, ros_ptr_, map_ptr_);
-            cmd_pub = nh_.advertise<quadrotor_msgs::PositionCommand>(cfg_.cmd_topic, 10);
-            mpc_cmd_pub_ = nh_.advertise<quadrotor_msgs::PolynomialTrajectory>(cfg_.mpc_cmd_topic, 10);
+            cmd_pub = nh_.advertise<super_msgs::PositionCommand>(cfg_.cmd_topic, 10);
+            mpc_cmd_pub_ = nh_.advertise<super_msgs::PolynomialTrajectory>(cfg_.mpc_cmd_topic, 10);
             path_pub_ = nh_.advertise<nav_msgs::Path>("fsm/path", 100);
 
             int cmd_cnt = 0;
@@ -332,7 +332,7 @@ namespace fsm {
             }
 
 
-            quadrotor_msgs::PolynomialTrajectory heartbeat;
+            super_msgs::PolynomialTrajectory heartbeat;
             getOneHeartBeatMsg(heartbeat, traj_finish_);
             getOnePositionCommand(pid_cmd_, traj_finish_);
             mpc_cmd_pub_.publish(heartbeat);
