@@ -19,7 +19,11 @@ find_package(catkin REQUIRED COMPONENTS
         rosfmt
         message_filters
         marsim_render
+        # yaml-cpp
         )
+
+
+
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED)
 find_package(OpenCV REQUIRED)
@@ -50,5 +54,6 @@ add_executable(perfect_drone
         src/ros1_perfect_drone_node.cpp
         )
 target_link_libraries(perfect_drone
-        ${THIRD_PARTY}
-        )
+    ${THIRD_PARTY}
+    yaml-cpp
+)

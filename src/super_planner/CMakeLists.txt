@@ -32,7 +32,7 @@ find_package(catkin REQUIRED COMPONENTS
         visualization_msgs
         message_filters
         rog_map
-        yaml-cpp
+        # yaml-cpp
         tf
 )
 find_package(yaml-cpp REQUIRED)

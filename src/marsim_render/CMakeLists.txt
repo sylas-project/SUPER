@@ -26,6 +26,8 @@ endif()
 # Add preprocessor definitions
 add_definitions(-DROOT_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}/\")
 
+
+find_package(catkin REQUIRED COMPONENTS)
 # Find required packages
 find_package(Eigen3 REQUIRED)
 find_package(OpenCV REQUIRED)

@@ -1,0 +1,73 @@
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/yaw_traj_opt.cpp: In member function ‘bool traj_opt::YawTrajOpt::optimize(const Vec4f&, const Vec4f&, const geometry_utils::Trajectory&, geometry_utils::Trajectory&, const int&, const bool&, const bool&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/yaw_traj_opt.cpp:116:39: warning: comparisons like ‘X<=Y<=Z’ do not have their mathematical meaning [-Wparentheses]
+  116 |             double t_g = pos_traj_dur > 0.5 > 0 ? 0.5 : pos_traj_dur;
+      |                          ~~~~~~~~~~~~~^~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp: In member function ‘double traj_opt::BackupTrajOpt::optimize(geometry_utils::Trajectory&, const double&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp:459:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  459 |         for (int i = 0; i < opt_vars.given_init_ps.size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::processCorridorWithGuideTraj()’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:475:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  475 |     for (int i = 0; i < opt_vars.guide_path.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::setInitPsAndTs(const vec_Vec3f&, const std::vector<double>&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:599:31: warning: comparison of integer expressions of different signedness: ‘Eigen::EigenBase<Eigen::Matrix<double, -1, 1> >::Index’ {aka ‘long int’} and ‘std::vector<double>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  599 |     if (opt_vars.times.size() != init_ts.size()) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:602:32: warning: comparison of integer expressions of different signedness: ‘Eigen::Index’ {aka ‘long int’} and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  602 |     if (opt_vars.points.cols() != init_ps.size()) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘double traj_opt::ExpTrajOpt::optimize(geometry_utils::Trajectory&, const double&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:638:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  638 |         for (int i = 0; i < opt_vars.init_ps.size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::optimize(const StatePVAJ&, const StatePVAJ&, super_utils::vec_E<Eigen::Matrix<double, 3, 1> >&, const std::vector<double>&, geometry_utils::PolytopeVec&, geometry_utils::Trajectory&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:900:24: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  900 |     for (long i = 0; i < sfcs.size(); i++) {
+      |                      ~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:937:28: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  937 |         for (long i = 0; i < sfcs.size(); i++) {
+      |                          ~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::optimize(const StatePVAJ&, const StatePVAJ&, geometry_utils::PolytopeVec&, const vec_Vec3f&, const VecDf&, geometry_utils::Trajectory&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:993:24: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  993 |     for (long i = 0; i < sfcs.size(); i++) {
+      |                      ~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:1029:28: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1029 |         for (long i = 0; i < sfcs.size(); i++) {
+      |                          ~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp: In member function ‘bool super_planner::CorridorGenerator::SearchPolytopeOnPath(const vec_Vec3f&, geometry_utils::PolytopeVec&, super_utils::Vec3f&, bool)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:76:24: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   76 |         while(first_id < path.size() && map_ptr_->isOccupiedInflate(path[first_id])) {
+      |               ~~~~~~~~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:89:42: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   89 |             for (int j = first_id + 1; j < path.size(); j++) {
+      |                                        ~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:105:56: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  105 |             if (second_id == first_id && second_id + 1 < path.size()) {
+      |                                          ~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:177:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  177 |             if (second_id == path.size() - 1) {
+      |                 ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp: In constructor ‘path_search::Astar::Astar(const string&, const Ptr&, rog_map::ROGMapROS::Ptr)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp:33:5: warning:   when initialized here [-Wreorder]
+   33 |     Astar::Astar(const std::string &cfg_path,
+      |     ^~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::getEnergyPartialGradByTimes(Eigen::VectorXd&) const’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:113:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘const int’ [-Wsign-compare]
+  113 |     for (long unsigned int i = 0; i < N; i++) {
+      |                                   ~~^~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::propogateGrad(const MatrixX3d&, const VectorXd&, Eigen::Matrix3Xd&, Eigen::VectorXd&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:128:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
+  128 |     for (long unsigned int i = 0; i < N - 1; i++) {
+      |                                   ~~^~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:134:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
+  134 |     for (long unsigned int i = 0; i < N - 1; i++) {
+      |                                   ~~^~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp: In member function ‘bool geometry_utils::Trajectory::getPartialTrajectoryByID(const int&, const int&, geometry_utils::Trajectory&) const’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp:203:33: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<geometry_utils::Piece>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  203 |     if (start_id < 0 || end_id_ >= pieces.size() || start_id >= end_id_) {
+      |                         ~~~~~~~~^~~~~~~~~~~~~~~~
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/super_planner.cpp: In constructor ‘super_planner::SuperPlanner::SuperPlanner(const string&, const Ptr&, const Ptr&)’:
+/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/super_planner.cpp:32:5: warning:   when initialized here [-Wreorder]
+   32 |     SuperPlanner::SuperPlanner
+      |     ^~~~~~~~~~~~
