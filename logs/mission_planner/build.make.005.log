@@ -1,3 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/waypoint_mission.dir/Apps/ros1_waypoint_mission.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /workspace/devel/.private/mission_planner/lib/mission_planner/waypoint_mission[0m
-[100%] Built target waypoint_mission

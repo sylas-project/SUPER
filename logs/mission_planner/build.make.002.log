@@ -1,9 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/waypoint_mission.dir/Apps/ros1_waypoint_mission.cpp.o[0m
-In file included from [01m[K/workspace/src/mission_planner/Apps/ros1_waypoint_mission.cpp:12[m[K:
-[01m[K/workspace/src/mission_planner/include/utils/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
-  246 | #include [01;31m[K<dwarf.h>[m[K
-      |          [01;31m[K^~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/waypoint_mission.dir/build.make:63: CMakeFiles/waypoint_mission.dir/Apps/ros1_waypoint_mission.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:233: CMakeFiles/waypoint_mission.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

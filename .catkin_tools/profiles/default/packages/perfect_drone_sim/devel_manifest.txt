@@ -1,0 +1,5 @@
+perfect_drone_sim
+/workspace/devel/.private/perfect_drone_sim/lib/pkgconfig/perfect_drone_sim.pc /workspace/devel/lib/pkgconfig/perfect_drone_sim.pc
+/workspace/devel/.private/perfect_drone_sim/lib/perfect_drone_sim/perfect_drone /workspace/devel/lib/perfect_drone_sim/perfect_drone
+/workspace/devel/.private/perfect_drone_sim/share/perfect_drone_sim/cmake/perfect_drone_simConfig-version.cmake /workspace/devel/share/perfect_drone_sim/cmake/perfect_drone_simConfig-version.cmake
+/workspace/devel/.private/perfect_drone_sim/share/perfect_drone_sim/cmake/perfect_drone_simConfig.cmake /workspace/devel/share/perfect_drone_sim/cmake/perfect_drone_simConfig.cmake

@@ -1,0 +1,7 @@
+marsim_render
+/workspace/devel/.private/marsim_render/lib/libGLAD.so /workspace/devel/lib/libGLAD.so
+/workspace/devel/.private/marsim_render/lib/libmarsim_render.so /workspace/devel/lib/libmarsim_render.so
+/workspace/devel/.private/marsim_render/lib/pkgconfig/marsim_render.pc /workspace/devel/lib/pkgconfig/marsim_render.pc
+/workspace/devel/.private/marsim_render/lib/marsim_render/test_render /workspace/devel/lib/marsim_render/test_render
+/workspace/devel/.private/marsim_render/share/marsim_render/cmake/marsim_renderConfig.cmake /workspace/devel/share/marsim_render/cmake/marsim_renderConfig.cmake
+/workspace/devel/.private/marsim_render/share/marsim_render/cmake/marsim_renderConfig-version.cmake /workspace/devel/share/marsim_render/cmake/marsim_renderConfig-version.cmake
