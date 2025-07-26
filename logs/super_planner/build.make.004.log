@@ -1,5 +1,22 @@
+[  3%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/backup_traj_optimizer_s4.cpp.o[0m
+[  7%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/quickhull.cpp.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/sdlp.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/polynomial_interpolation.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/root_finder.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/waypoint_trajectory_optimizer.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/trajectory.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/polytope.cpp.o[0m
+[01m[K/workspace/src/super_planner/src/utils/trajectory.cpp:[m[K In member function ‘[01m[Kbool geometry_utils::Trajectory::getPartialTrajectoryByID(const int&, const int&, geometry_utils::Trajectory&) const[m[K’:
+[01m[K/workspace/src/super_planner/src/utils/trajectory.cpp:203:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_utils::Piece>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  203 |     if (start_id < 0 || [01;35m[Kend_id_ >= pieces.size()[m[K || start_id >= end_id_) {
+      |                         [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp:[m[K In member function ‘[01m[Kdouble traj_opt::BackupTrajOpt::optimize(geometry_utils::Trajectory&, const double&)[m[K’:
+[01m[K/workspace/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp:459:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  459 |         for (int i = 0; [01;35m[Ki < opt_vars.given_init_ps.size()[m[K; i++) {
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[ 34%] [32m[1mLinking CXX static library /workspace/devel/.private/super_planner/lib/libsuper.a[0m
 [ 92%] Built target super
 [35m[1mScanning dependencies of target fsm_node[0m
 [ 96%] [32mBuilding CXX object CMakeFiles/fsm_node.dir/Apps/fsm_node_ros1.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/thurdparty/Code/SUPER/devel/.private/super_planner/lib/super_planner/fsm_node[0m
+[100%] [32m[1mLinking CXX executable /workspace/devel/.private/super_planner/lib/super_planner/fsm_node[0m
 [100%] Built target fsm_node

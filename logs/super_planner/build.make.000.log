@@ -1,109 +1,79 @@
 [35m[1mScanning dependencies of target super[0m
-[  7%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/astar.cpp.o[0m
-[  7%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/ciri.cpp.o[0m
-[ 11%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/corridor_generator.cpp.o[0m
-[ 15%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/fsm.cpp.o[0m
+[  3%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/astar.cpp.o[0m
+[  7%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/corridor_generator.cpp.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/ciri.cpp.o[0m
 [ 19%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/backup_traj_optimizer_s4.cpp.o[0m
-[ 23%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/super_planner.cpp.o[0m
-[ 26%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/exp_traj_optimizer_s4.cpp.o[0m
-[ 30%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/yaw_traj_opt.cpp.o[0m
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/yaw_traj_opt.cpp: In member function ‘bool traj_opt::YawTrajOpt::optimize(const Vec4f&, const Vec4f&, const geometry_utils::Trajectory&, geometry_utils::Trajectory&, const int&, const bool&, const bool&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/yaw_traj_opt.cpp:116:39: warning: comparisons like ‘X<=Y<=Z’ do not have their mathematical meaning [-Wparentheses]
-  116 |             double t_g = pos_traj_dur > 0.5 > 0 ? 0.5 : pos_traj_dur;
-      |                          ~~~~~~~~~~~~~^~~~~
-[ 34%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/banded_system.cpp.o[0m
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp: In member function ‘double traj_opt::BackupTrajOpt::optimize(geometry_utils::Trajectory&, const double&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp:459:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  459 |         for (int i = 0; i < opt_vars.given_init_ps.size(); i++) {
-      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::processCorridorWithGuideTraj()’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:475:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  475 |     for (int i = 0; i < opt_vars.guide_path.size(); i++) {
-      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::setInitPsAndTs(const vec_Vec3f&, const std::vector<double>&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:599:31: warning: comparison of integer expressions of different signedness: ‘Eigen::EigenBase<Eigen::Matrix<double, -1, 1> >::Index’ {aka ‘long int’} and ‘std::vector<double>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  599 |     if (opt_vars.times.size() != init_ts.size()) {
-      |         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:602:32: warning: comparison of integer expressions of different signedness: ‘Eigen::Index’ {aka ‘long int’} and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  602 |     if (opt_vars.points.cols() != init_ps.size()) {
-      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘double traj_opt::ExpTrajOpt::optimize(geometry_utils::Trajectory&, const double&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:638:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  638 |         for (int i = 0; i < opt_vars.init_ps.size(); i++) {
-      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::optimize(const StatePVAJ&, const StatePVAJ&, super_utils::vec_E<Eigen::Matrix<double, 3, 1> >&, const std::vector<double>&, geometry_utils::PolytopeVec&, geometry_utils::Trajectory&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:900:24: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  900 |     for (long i = 0; i < sfcs.size(); i++) {
-      |                      ~~^~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:937:28: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  937 |         for (long i = 0; i < sfcs.size(); i++) {
-      |                          ~~^~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp: In member function ‘bool traj_opt::ExpTrajOpt::optimize(const StatePVAJ&, const StatePVAJ&, geometry_utils::PolytopeVec&, const vec_Vec3f&, const VecDf&, geometry_utils::Trajectory&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:993:24: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  993 |     for (long i = 0; i < sfcs.size(); i++) {
-      |                      ~~^~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:1029:28: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘std::vector<geometry_utils::Polytope>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
- 1029 |         for (long i = 0; i < sfcs.size(); i++) {
-      |                          ~~^~~~~~~~~~~~~
-[ 38%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/ellipsoid.cpp.o[0m
-[ 42%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/geometry_utils.cpp.o[0m
-[ 46%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/lbfgs.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/minco.cpp.o[0m
-[ 53%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/mvie.cpp.o[0m
-[ 57%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/optimization_utils.cpp.o[0m
-[ 61%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/piece.cpp.o[0m
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::getEnergyPartialGradByTimes(Eigen::VectorXd&) const’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:113:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘const int’ [-Wsign-compare]
-  113 |     for (long unsigned int i = 0; i < N; i++) {
-      |                                   ~~^~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp: In member function ‘void traj_opt::MINCO_S2NU::propogateGrad(const MatrixX3d&, const VectorXd&, Eigen::Matrix3Xd&, Eigen::VectorXd&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:128:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
-  128 |     for (long unsigned int i = 0; i < N - 1; i++) {
-      |                                   ~~^~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/minco.cpp:134:37: warning: comparison of integer expressions of different signedness: ‘long unsigned int’ and ‘int’ [-Wsign-compare]
-  134 |     for (long unsigned int i = 0; i < N - 1; i++) {
-      |                                   ~~^~~~~~~
-[ 65%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/polynomial_interpolation.cpp.o[0m
-[ 69%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/polytope.cpp.o[0m
-[ 73%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/quickhull.cpp.o[0m
-[ 76%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/root_finder.cpp.o[0m
-[ 80%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/sdlp.cpp.o[0m
-[ 84%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/trajectory.cpp.o[0m
-[ 88%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/waypoint_trajectory_optimizer.cpp.o[0m
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp: In constructor ‘path_search::Astar::Astar(const string&, const Ptr&, rog_map::ROGMapROS::Ptr)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/astar.cpp:33:5: warning:   when initialized here [-Wreorder]
-   33 |     Astar::Astar(const std::string &cfg_path,
-      |     ^~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp: In member function ‘bool super_planner::CorridorGenerator::SearchPolytopeOnPath(const vec_Vec3f&, geometry_utils::PolytopeVec&, super_utils::Vec3f&, bool)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:76:24: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-   76 |         while(first_id < path.size() && map_ptr_->isOccupiedInflate(path[first_id])) {
-      |               ~~~~~~~~~^~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:89:42: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-   89 |             for (int j = first_id + 1; j < path.size(); j++) {
-      |                                        ~~^~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:105:56: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  105 |             if (second_id == first_id && second_id + 1 < path.size()) {
-      |                                          ~~~~~~~~~~~~~~^~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/corridor_generator.cpp:177:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  177 |             if (second_id == path.size() - 1) {
-      |                 ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/super_planner.cpp: In constructor ‘super_planner::SuperPlanner::SuperPlanner(const string&, const Ptr&, const Ptr&)’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/super_core/super_planner.cpp:32:5: warning:   when initialized here [-Wreorder]
-   32 |     SuperPlanner::SuperPlanner
-      |     ^~~~~~~~~~~~
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp: In member function ‘bool geometry_utils::Trajectory::getPartialTrajectoryByID(const int&, const int&, geometry_utils::Trajectory&) const’:
-/home/thurdparty/Code/SUPER/src/super_planner/src/utils/trajectory.cpp:203:33: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<geometry_utils::Piece>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-  203 |     if (start_id < 0 || end_id_ >= pieces.size() || start_id >= end_id_) {
-      |                         ~~~~~~~~^~~~~~~~~~~~~~~~
-[ 92%] [32m[1mLinking CXX static library /home/thurdparty/Code/SUPER/devel/.private/super_planner/lib/libsuper.a[0m
-[ 92%] Built target super
-[35m[1mScanning dependencies of target fsm_node[0m
-[ 96%] [32mBuilding CXX object CMakeFiles/fsm_node.dir/Apps/fsm_node_ros1.cpp.o[0m
-In file included from [01m[K/home/thurdparty/Code/SUPER/src/super_planner/Apps/fsm_node_ros1.cpp:24[m[K:
-[01m[K/home/thurdparty/Code/SUPER/src/super_planner/include/ros_interface/ros1/fsm_ros1.hpp:36:10:[m[K [01;31m[Kfatal error: [m[Kquadrotor_msgs/PositionCommand.h: No such file or directory
-   36 | #include [01;31m[K"quadrotor_msgs/PositionCommand.h"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[ 19%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/fsm.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/yaw_traj_opt.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/super_planner.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/exp_traj_optimizer_s4.cpp.o[0m
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/piece.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/trajectory.h:51[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/minco.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/exp_traj_optimizer_s4.h:31[m[K,
+                 from [01m[K/workspace/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/polytope.h:27[m[K,
+                 from [01m[K/workspace/src/super_planner/include/super_core/ciri.h:51[m[K,
+                 from [01m[K/workspace/src/super_planner/src/super_core/ciri.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
 compilation terminated.
-make[2]: *** [CMakeFiles/fsm_node.dir/build.make:63: CMakeFiles/fsm_node.dir/Apps/fsm_node_ros1.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:235: CMakeFiles/fsm_node.dir/all] Error 2
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:76: CMakeFiles/super.dir/src/super_core/ciri.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/super.dir/build.make:141: CMakeFiles/super.dir/src/traj_opt/exp_traj_optimizer_s4.cpp.o] Error 1
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/piece.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/trajectory.h:51[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/minco.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/backup_traj_optimizer_s4.h:29[m[K,
+                 from [01m[K/workspace/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:128: CMakeFiles/super.dir/src/traj_opt/backup_traj_optimizer_s4.cpp.o] Error 1
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/utils/geometry/geometry_utils.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/yaw_traj_opt.h:29[m[K,
+                 from [01m[K/workspace/src/super_planner/src/traj_opt/yaw_traj_opt.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:154: CMakeFiles/super.dir/src/traj_opt/yaw_traj_opt.cpp.o] Error 1
+[01m[K/workspace/src/super_planner/src/super_core/astar.cpp:[m[K In constructor ‘[01m[Kpath_search::Astar::Astar(const string&, const Ptr&, rog_map::ROGMapROS::Ptr)[m[K’:
+[01m[K/workspace/src/super_planner/src/super_core/astar.cpp:33:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   33 |     [01;35m[KAstar[m[K::Astar(const std::string &cfg_path,
+      |     [01;35m[K^~~~~[m[K
+[01m[K/workspace/src/super_planner/src/super_core/corridor_generator.cpp:[m[K In member function ‘[01m[Kbool super_planner::CorridorGenerator::SearchPolytopeOnPath(const vec_Vec3f&, geometry_utils::PolytopeVec&, super_utils::Vec3f&, bool)[m[K’:
+[01m[K/workspace/src/super_planner/src/super_core/corridor_generator.cpp:76:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   76 |         while([01;35m[Kfirst_id < path.size()[m[K && map_ptr_->isOccupiedInflate(path[first_id])) {
+      |               [01;35m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/workspace/src/super_planner/src/super_core/corridor_generator.cpp:89:42:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   89 |             for (int j = first_id + 1; [01;35m[Kj < path.size()[m[K; j++) {
+      |                                        [01;35m[K~~^~~~~~~~~~~~~[m[K
+[01m[K/workspace/src/super_planner/src/super_core/corridor_generator.cpp:105:56:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  105 |             if (second_id == first_id && [01;35m[Ksecond_id + 1 < path.size()[m[K) {
+      |                                          [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/workspace/src/super_planner/src/super_core/corridor_generator.cpp:177:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Eigen::Matrix<double, 3, 1>, Eigen::aligned_allocator<Eigen::Matrix<double, 3, 1> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  177 |             if ([01;35m[Ksecond_id == path.size() - 1[m[K) {
+      |                 [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/src/super_planner/src/super_core/super_planner.cpp:[m[K In constructor ‘[01m[Ksuper_planner::SuperPlanner::SuperPlanner(const string&, const Ptr&, const Ptr&)[m[K’:
+[01m[K/workspace/src/super_planner/src/super_core/super_planner.cpp:32:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   32 |     [01;35m[KSuperPlanner[m[K::SuperPlanner
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:89: CMakeFiles/super.dir/src/super_core/corridor_generator.cpp.o] Error 1
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:102: CMakeFiles/super.dir/src/super_core/fsm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2125: CMakeFiles/super.dir/all] Error 2
 make: *** [Makefile:141: all] Error 2

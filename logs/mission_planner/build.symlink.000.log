@@ -1,4 +1,4 @@
-Symlinking /home/thurdparty/Code/SUPER/devel/lib/mission_planner/waypoint_mission
-Symlinking /home/thurdparty/Code/SUPER/devel/lib/pkgconfig/mission_planner.pc
-Symlinking /home/thurdparty/Code/SUPER/devel/share/mission_planner/cmake/mission_plannerConfig.cmake
-Symlinking /home/thurdparty/Code/SUPER/devel/share/mission_planner/cmake/mission_plannerConfig-version.cmake
+Symlinking /workspace/devel/lib/mission_planner/waypoint_mission
+Symlinking /workspace/devel/lib/pkgconfig/mission_planner.pc
+Symlinking /workspace/devel/share/mission_planner/cmake/mission_plannerConfig.cmake
+Symlinking /workspace/devel/share/mission_planner/cmake/mission_plannerConfig-version.cmake

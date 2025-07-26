@@ -1,9 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/perfect_drone.dir/src/ros1_perfect_drone_node.cpp.o[0m
-In file included from [01m[K/home/thurdparty/Code/SUPER/src/perfect_drone_sim/src/ros1_perfect_drone_node.cpp:1[m[K:
-[01m[K/home/thurdparty/Code/SUPER/src/perfect_drone_sim/include/perfect_drone_sim/ros1_perfect_drone_model.hpp:8:10:[m[K [01;31m[Kfatal error: [m[Kquadrotor_msgs/PositionCommand.h: No such file or directory
-    8 | #include [01;31m[K"quadrotor_msgs/PositionCommand.h"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/perfect_drone.dir/build.make:63: CMakeFiles/perfect_drone.dir/src/ros1_perfect_drone_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:233: CMakeFiles/perfect_drone.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

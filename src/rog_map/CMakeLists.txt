@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(rog_map)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 #set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_FLAGS "-O3 -Wall -g -fPIC")
@@ -16,6 +16,9 @@ cmake_policy(SET CMP0054 NEW)
 set(CMAKE_SUPPRESS_DEVELOPER_WARNINGS 1 CACHE BOOL "Suppress developer warnings")
 
 add_definitions(-DROOT_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}/\")
+
+# TODO: Remove this for ubuntu
+add_definitions(-DBOOST_MPL_CFG_NO_OWN_PP_PRIMITIVES -Wno-enum-constexpr-conversion)
 
 # Define the voxelize and raycasting method
 add_definitions(-DORIGIN_AT_CORNER)

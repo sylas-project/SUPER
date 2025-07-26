@@ -1,10 +1,77 @@
-[ 92%] Built target super
-[ 96%] [32mBuilding CXX object CMakeFiles/fsm_node.dir/Apps/fsm_node_ros1.cpp.o[0m
-In file included from [01m[K/home/thurdparty/Code/SUPER/src/super_planner/Apps/fsm_node_ros1.cpp:24[m[K:
-[01m[K/home/thurdparty/Code/SUPER/src/super_planner/include/ros_interface/ros1/fsm_ros1.hpp:36:10:[m[K [01;31m[Kfatal error: [m[Kquadrotor_msgs/PositionCommand.h: No such file or directory
-   36 | #include [01;31m[K"quadrotor_msgs/PositionCommand.h"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[  3%] [32mBuilding CXX object CMakeFiles/super.dir/src/super_core/ciri.cpp.o[0m
+[  7%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/backup_traj_optimizer_s4.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/exp_traj_optimizer_s4.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/super.dir/src/traj_opt/yaw_traj_opt.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/geometry_utils.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/ellipsoid.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/lbfgs.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/super.dir/src/utils/minco.cpp.o[0m
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/piece.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/trajectory.h:51[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/minco.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/backup_traj_optimizer_s4.h:29[m[K,
+                 from [01m[K/workspace/src/super_planner/src/traj_opt/backup_traj_optimizer_s4.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
 compilation terminated.
-make[2]: *** [CMakeFiles/fsm_node.dir/build.make:63: CMakeFiles/fsm_node.dir/Apps/fsm_node_ros1.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:235: CMakeFiles/fsm_node.dir/all] Error 2
+make[2]: *** [CMakeFiles/super.dir/build.make:128: CMakeFiles/super.dir/src/traj_opt/backup_traj_optimizer_s4.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/polytope.h:27[m[K,
+                 from [01m[K/workspace/src/super_planner/include/super_core/ciri.h:51[m[K,
+                 from [01m[K/workspace/src/super_planner/src/super_core/ciri.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:76: CMakeFiles/super.dir/src/super_core/ciri.cpp.o] Error 1
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/utils/geometry/geometry_utils.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/src/utils/geometry_utils.cpp:27[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/ellipsoid.h:26[m[K,
+                 from [01m[K/workspace/src/super_planner/src/utils/ellipsoid.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:193: CMakeFiles/super.dir/src/utils/geometry_utils.cpp.o] Error 1
+make[2]: *** [CMakeFiles/super.dir/build.make:180: CMakeFiles/super.dir/src/utils/ellipsoid.cpp.o] Error 1
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/piece.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/trajectory.h:51[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/minco.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/exp_traj_optimizer_s4.h:31[m[K,
+                 from [01m[K/workspace/src/super_planner/src/traj_opt/exp_traj_optimizer_s4.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:141: CMakeFiles/super.dir/src/traj_opt/exp_traj_optimizer_s4.cpp.o] Error 1
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/utils/geometry/geometry_utils.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/yaw_traj_opt.h:29[m[K,
+                 from [01m[K/workspace/src/super_planner/src/traj_opt/yaw_traj_opt.cpp:24[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:154: CMakeFiles/super.dir/src/traj_opt/yaw_traj_opt.cpp.o] Error 1
+In file included from [01m[K/workspace/src/super_planner/include/utils/header/type_utils.hpp:31[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/piece.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/include/data_structure/base/trajectory.h:51[m[K,
+                 from [01m[K/workspace/src/super_planner/include/traj_opt/minco.h:50[m[K,
+                 from [01m[K/workspace/src/super_planner/src/utils/minco.cpp:1[m[K:
+[01m[K/workspace/src/super_planner/include/utils/header/backward.hpp:246:10:[m[K [01;31m[Kfatal error: [m[Kdwarf.h: No such file or directory
+  246 | #include [01;31m[K<dwarf.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/super.dir/build.make:219: CMakeFiles/super.dir/src/utils/minco.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2125: CMakeFiles/super.dir/all] Error 2
 make: *** [Makefile:141: all] Error 2

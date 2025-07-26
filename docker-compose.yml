@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  ros-noetic:
+    image: ros:noetic-ros-core
+    container_name: ros_noetic_core
+    environment:
+      - ROS_DISTRO=noetic
+      - ROS_PACKAGE_PATH=/workspace
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    build:
+      context: .
+      dockerfile: Dockerfile

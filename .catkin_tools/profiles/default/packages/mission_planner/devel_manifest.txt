@@ -1,5 +1,5 @@
 mission_planner
-/home/thurdparty/Code/SUPER/devel/.private/mission_planner/lib/mission_planner/waypoint_mission /home/thurdparty/Code/SUPER/devel/lib/mission_planner/waypoint_mission
-/home/thurdparty/Code/SUPER/devel/.private/mission_planner/lib/pkgconfig/mission_planner.pc /home/thurdparty/Code/SUPER/devel/lib/pkgconfig/mission_planner.pc
-/home/thurdparty/Code/SUPER/devel/.private/mission_planner/share/mission_planner/cmake/mission_plannerConfig.cmake /home/thurdparty/Code/SUPER/devel/share/mission_planner/cmake/mission_plannerConfig.cmake
-/home/thurdparty/Code/SUPER/devel/.private/mission_planner/share/mission_planner/cmake/mission_plannerConfig-version.cmake /home/thurdparty/Code/SUPER/devel/share/mission_planner/cmake/mission_plannerConfig-version.cmake
+/workspace/devel/.private/mission_planner/lib/mission_planner/waypoint_mission /workspace/devel/lib/mission_planner/waypoint_mission
+/workspace/devel/.private/mission_planner/lib/pkgconfig/mission_planner.pc /workspace/devel/lib/pkgconfig/mission_planner.pc
+/workspace/devel/.private/mission_planner/share/mission_planner/cmake/mission_plannerConfig.cmake /workspace/devel/share/mission_planner/cmake/mission_plannerConfig.cmake
+/workspace/devel/.private/mission_planner/share/mission_planner/cmake/mission_plannerConfig-version.cmake /workspace/devel/share/mission_planner/cmake/mission_plannerConfig-version.cmake
