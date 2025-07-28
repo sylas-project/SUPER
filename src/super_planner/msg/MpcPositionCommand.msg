@@ -1,5 +1,5 @@
 Header header
-super_msgs/PositionCommand[] cmds
+super_planner/PositionCommand[] cmds
 uint32 mpc_horizon
 uint8 command_flag
 uint8 NORMAL_COMMAND = 1

@@ -28,10 +28,14 @@ find_package(catkin REQUIRED COMPONENTS
         geometry_msgs
         nav_msgs
         message_generation
-        super_msgs
+        # super_msgs
         visualization_msgs
         message_filters
         rog_map
+        roscpp
+        nav_msgs
+        geometry_msgs
+        message_generation
         # yaml-cpp
         tf
 )
@@ -39,12 +43,30 @@ find_package(yaml-cpp REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system filesystem regex iostreams)
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED)
+
+
+add_message_files(
+        FILES
+        PositionCommand.msg
+        MpcPositionCommand.msg
+        PolynomialTrajectory.msg
+        TrakingPerformance.msg
+        QuadrotorState.msg
+)
+
+generate_messages(
+        DEPENDENCIES
+        geometry_msgs
+        nav_msgs
+)
+
 catkin_package(
         INCLUDE_DIRS
         LIBRARIES super_planner
-        CATKIN_DEPENDS roscpp rospy std_msgs
+        CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
         #  DEPENDS system_lib
 )
+
 
 include_directories(
         SYSTEM
@@ -80,6 +102,16 @@ target_link_libraries(fsm_node
         super
         ${THIRD_PARTY}
 )
+
+
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+
+include_directories(
+        ${catkin_INCLUDE_DIRS}
+        include
+)
+
+#
 
 #add_executable(read_replan_log
 #        Apps/read_replan_log.cpp
