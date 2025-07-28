@@ -21,6 +21,10 @@
 * along with SUPER. If not, see <http://www.gnu.org/licenses/>.
 */
 
+
+// CHANGES SUMMARY:
+// added PAUSING -> WAIT_GOAL
+
 #include <fsm/fsm.h>
 #include <memory>
 
@@ -168,6 +172,13 @@ namespace fsm {
                 ChangeState("MainFsmCallback", WAIT_GOAL);
                 break;
             }
+
+            // added PAUSING -> WAIT_GOAL
+            case PAUSING: {
+                ChangeState("MainFsmCallback", WAIT_GOAL);
+                break;
+            }
+
             default:
                 break;
         }

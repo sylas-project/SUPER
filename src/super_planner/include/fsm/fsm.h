@@ -21,6 +21,9 @@
 * along with SUPER. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// CHANGES SUMMARY:
+// added PAUSING 
+
 
 #pragma once
 
@@ -78,7 +81,9 @@ namespace fsm {
             YAWING,
             GENERATE_TRAJ,
             FOLLOW_TRAJ,
-            EMER_STOP
+            EMER_STOP,
+            // added PAUSING
+            PAUSING
         };
 
         vector<string> MACHINE_STATE_STR{
@@ -86,7 +91,9 @@ namespace fsm {
                 "WAIT_GOAL",
                 "YAWING",
                 "GENERATE_TRAJ",
-                "FOLLOW_TRAJ", "EMER_STOP"
+                "FOLLOW_TRAJ", "EMER_STOP",
+                // added PAUSING
+                "PAUSING"
         };
 
 
